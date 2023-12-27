@@ -2,6 +2,29 @@ use strict;
 use warnings;
 use Test::Simple tests => 4;
 
+"""
+Assignment One: Extra Credit
+
+- Add support for optional command line parameters that controls the 
+sort order. 
+
+Type:
+> perl mySorter.pl -r spencer able delta
+
+or
+
+> perl mySorter.pl --reverse spencer able delta
+
+See:
+spencer delta able
+
+Type:
+> perl mySorter.pl --foo spencer able delta
+
+See:
+The most useful error message you can think of. 
+"""
+
 # Test 1: Normal Ascending Sort
 ok(`perl ReDaySorter.pl apple banana cherry` eq "apple banana cherry\n", 'Test Ascending Sort');
 

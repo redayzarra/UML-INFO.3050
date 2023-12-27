@@ -24,6 +24,7 @@ able delta spencer
 
 Type:
 > perl mySorter.pl
+
 See:
 Invalid command line arguments to program. Please supply two or more strings
 to sort.
