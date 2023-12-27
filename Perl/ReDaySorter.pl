@@ -1,4 +1,36 @@
-# Perl has been added to system path at Strawberry/perl/bin
+# Make sure Perl has been added to system path at Strawberry/perl/bin
+
+"""
+Assignment One:  Simple Sort Program Written in Perl
+
+Instructions: Please write a simple Perl script (carefully) following 
+the instructions below.
+
+Hint: After studying the problem, you should able to write this program in only a few lines of
+code. If you are having trouble, first identify each thing this program must be able to do, and
+then solve that particular piece. Then move onto the new piece. (There are only a couple of
+parts).
+
+Requirements:
+- Write a Perl program that reads in an arbitrary number of strings from the command line and
+displays them sorted alphabetically.
+Here are some example interactions
+
+From the command line type:
+> perl mySorter.pl spencer able delta
+
+See:
+able delta spencer
+
+Type:
+> perl mySorter.pl
+See:
+Invalid command line arguments to program. Please supply two or more strings
+to sort.
+
+- Name your program yourname_sort.pl
+- Make sure you handle the invalid number of argument case. 
+""" 
 
 use strict;
 use warnings;

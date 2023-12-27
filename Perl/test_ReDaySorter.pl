@@ -8,8 +8,8 @@ ok(`perl ReDaySorter.pl apple banana cherry` eq "apple banana cherry\n", 'Test A
 # Test 2: Normal Descending Sort
 ok(`perl ReDaySorter.pl -r apple banana cherry` eq "cherry banana apple\n", 'Test Descending Sort');
 
-# Test 3: Invalid Switch - Update the expected output
+# Test 3: Invalid Switch
 ok(`perl ReDaySorter.pl --foo apple banana cherry` eq "Invalid switch --foo. Use -r or --reverse for reverse sorting.\n", 'Test Invalid Switch');
 
-# Test 4: No Strings Provided - Update the expected output
+# Test 4: No Strings Provided
 ok(`perl ReDaySorter.pl` eq "Please supply two or more input values to start.\n", 'Test No Input');
