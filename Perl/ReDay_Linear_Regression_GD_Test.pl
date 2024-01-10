@@ -14,6 +14,7 @@ for (my $i = 0; $i < scalar @x_values; $i++) {
     my $observed = $y_values[$i];
     $sum_of_squared_errors += ($predicted - $observed) ** 2;
 }
+
 # Calculate the Mean Squared Error
 my $mse = $sum_of_squared_errors / $n;
 
