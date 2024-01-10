@@ -31,7 +31,7 @@ class ReDaySorter:
 		
 		# The mergeSort helper function simply calls the merge on mid
         def mergeSort(arr: List[int]) -> List[int]:
-            if len(arr) == 1:
+            if len(arr) <= 1:
                 return arr
 
             mid = len(arr) // 2
