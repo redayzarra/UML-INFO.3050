@@ -1,8 +1,8 @@
-# Make sure Perl has been added to system path at Strawberry/perl/bin
-
 use strict;
 use warnings;
-"""
+
+=pod
+
 Assignment 2 - Complex Perl Program: Linear Regression Gradient Descent
 
 Instructions: I want you to choose something not too simple, but not something too hard for you
@@ -12,7 +12,15 @@ than harder. That will be OK. Remember, I prefer higher quality code, complete w
 than a more ambitious, but incomplete or rushed work. 
 
 Requirements: I prefer a high quality to high quantity.
-"""
+
+=cut
+
+# Sample data (x, y)
+our @x_values = (1, 2, 3, 4, 5);
+our @y_values = (2, 3, 4, 5, 6);
+
+# Number of training examples
+my $n = scalar @x_values;
 
 # Theta parameters for bias and slope coefficients
 my $theta_0 = 0; # Intercept
@@ -21,14 +29,20 @@ my $theta_1 = 0; # Slope
 # The learning rate - decides how big of a step we take in any direction
 my $alpha = 0.01;
 
-# Number of iterations which need to played around with - ensemble method
-# in machine learning is when another model would manipulate these variables.
+# Number of iterations
 my $iterations = 1000;
 
-# Number of training examples
-my $n = scalar @x_values;
+# Debugging: Print initial data and $n
+print "Initial X values: @x_values\n";
+print "Initial Y values: @y_values\n";
+print "Number of data points (n): $n\n\n";
 
-# Gradient Descent Algorithm - from notes
+# Debugging: Print initial theta values
+print "Expected Theta 0 (Intercept): 1\n";
+print "Expected Theta 1 (Slope): 1\n\n";
+
+# Gradient Descent Algorithm: Ensure @x_values and @y_values are defined 
+# and $n is set - in test script 
 for (1..$iterations) {
     my $sum_error_0 = 0;
     my $sum_error_1 = 0;
@@ -45,5 +59,5 @@ for (1..$iterations) {
 }
 
 # Output the learned parameters
-print "Theta 0: $theta_0\n";
-print "Theta 1: $theta_1\n";
+print "Calculated Theta 0 (Intercept): $theta_0\n";
+print "Calculated Theta 1 (Slope): $theta_1\n\n";
