@@ -28,3 +28,22 @@ my $iterations = 1000;
 # Number of training examples
 my $n = scalar @x_values;
 
+# Gradient Descent Algorithm - from notes
+for (1..$iterations) {
+    my $sum_error_0 = 0;
+    my $sum_error_1 = 0;
+
+    for (my $i = 0; $i < $n; $i++) {
+        my $y_pred = $theta_0 + $theta_1 * $x_values[$i];
+        $sum_error_0 += ($y_pred - $y_values[$i]);
+        $sum_error_1 += ($y_pred - $y_values[$i]) * $x_values[$i];
+    }
+
+    # Simultaneous update of parameters
+    $theta_0 -= $alpha * $sum_error_0 / $n;
+    $theta_1 -= $alpha * $sum_error_1 / $n;
+}
+
+# Output the learned parameters
+print "Theta 0: $theta_0\n";
+print "Theta 1: $theta_1\n";
