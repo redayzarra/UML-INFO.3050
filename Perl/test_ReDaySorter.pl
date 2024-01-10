@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Test::Simple tests => 4;
 
-"""
+=pod
 Assignment One: Extra Credit
 
 - Add support for optional command line parameters that controls the 
@@ -23,7 +23,7 @@ Type:
 
 See:
 The most useful error message you can think of. 
-"""
+=cut
 
 # Test 1: Normal Ascending Sort
 ok(`perl ReDaySorter.pl apple banana cherry` eq "apple banana cherry\n", 'Test Ascending Sort');

@@ -1,6 +1,6 @@
 # Make sure Perl has been added to system path at Strawberry/perl/bin
 
-"""
+=pod
 Assignment One:  Simple Sort Program Written in Perl
 
 Instructions: Please write a simple Perl script (carefully) following 
@@ -31,7 +31,7 @@ to sort.
 
 - Name your program yourname_sort.pl
 - Make sure you handle the invalid number of argument case. 
-""" 
+=cut
 
 use strict;
 use warnings;
