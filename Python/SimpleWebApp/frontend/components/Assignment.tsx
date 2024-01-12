@@ -28,7 +28,7 @@ const Assignment = () => {
 
   return (
     <div className="">
-      Hello, the current time in {data.timezone} is {data.current_time}
+      Hello, the current time in <span className='font-bold'>{data.timezone}</span> is <span className='font-bold'>{data.current_time}</span>
     </div>
   );
 };

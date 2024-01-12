@@ -2,7 +2,7 @@
 
 ## Setup and Installation
 
-1. Start the backend server
+1. Start the backend server (will start on localhost:8080)
 ```bash
 python backend/server/app.py
 ```
