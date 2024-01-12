@@ -9,7 +9,7 @@ const Assignment = () => {
   useEffect(() => {
     const fetchAssignmentData = async () => {
       try {
-        const response = await getAssignment(); // Ensure this calls the correct endpoint
+        const response = await getAssignment();
         setData({
           timezone: response.timezone || 'Unavailable',
           current_time: response.current_time || 'Unavailable'
@@ -21,7 +21,7 @@ const Assignment = () => {
     };
 
     fetchAssignmentData();
-    const interval = setInterval(fetchAssignmentData, 30000);
+    const interval = setInterval(fetchAssignmentData, 10000);
 
     return () => clearInterval(interval);
   }, []);
