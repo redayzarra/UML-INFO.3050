@@ -27,7 +27,7 @@ const Assignment = () => {
   }, []);
 
   return (
-    <div className="mt-4">
+    <div className="">
       Hello, the current time in {data.timezone} is {data.current_time}
     </div>
   );
