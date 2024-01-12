@@ -2,6 +2,8 @@ import os
 from flask import Flask
 from flask import jsonify
 from flask_cors import CORS
+from datetime import datetime
+import pytz
 
 # Set up the backend server
 app = Flask(__name__)
@@ -12,7 +14,7 @@ app.config.from_mapping(
 )
 
 # Enable CORS
-CORS(app, resources={r"/drone/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # The logging has already been set up
 app.logger.info("Server started.")
@@ -26,6 +28,25 @@ def test():
         app.logger.error(f"Error during start up.")
         return jsonify({"status": "error", "message": "God damn flask."}), 500
 
+@app.route("/assignment", methods=["GET"])
+def assignment():
+    try:
+        # Specify the timezone
+        timezone = pytz.timezone("America/New_York") 
+
+        # Get current time in the specified timezone
+        current_time = datetime.now(timezone)
+
+        # Format the time
+        formatted_time = current_time.strftime("%I:%M %p")
+
+        response = {"timezone": str(timezone), "current_time": formatted_time}
+
+        app.logger.info(f"Successfully got the assignment values.")
+        return jsonify({"status": "success", "response": response}), 200
+    except Exception as e:
+        app.logger.error(f"There was an error trying to get the assignment values: {e}")
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 if __name__ == "__main__":
     try:
