@@ -3,7 +3,7 @@
 ## Setup and Installation
 
 1. Start the backend server
-```python
+```bash
 python backend/server/app.py
 ```
 
