@@ -1,8 +1,9 @@
 import os
 from flask import Flask
-from flask import Response, jsonify, request
+from flask import jsonify
 from flask_cors import CORS
 
+# Set up the backend server
 app = Flask(__name__)
 app.config.from_mapping(
     DEBUG=False,
@@ -16,10 +17,10 @@ CORS(app, resources={r"/drone/*": {"origins": "*"}})
 # The logging has already been set up
 app.logger.info("Server started.")
 
-@app.route("/drone/takeoff", methods=["POST"])
-def takeoff():
+@app.route("/test/backend", methods=["POST"])
+def test():
     try:
-        app.logger.info(f"App is up and running.")
+        app.logger.info(f"Backend is up and running.")
         return jsonify({"status": "success", "response": "We are good to go."}), 200
     except Exception as e:
         app.logger.error(f"Error during start up.")
